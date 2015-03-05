@@ -138,9 +138,6 @@
             });
         });
 
-        $("#playsong").click(function(e) {
-            socket.emit('sing', mysong);
-        });
 
         $("#passiveMode").click(function(e) {
             socket.emit('passiveMode');
@@ -311,68 +308,66 @@
         </div>
 
 
-        <h3>Robot Control</h3>
+        <div class="controls">
         <div class="row">
-            <button class="btn-success btn col-md-2" id="passiveMode">Passive Mode</button>
-            <button class="btn-warning btn col-md-2" id="safeMode">Safe Mode</button>
-            <button class="btn-danger btn col-md-2" id="fullMode">Full Mode</button>
+            <div class="mode">
+                <div class="col-md-2 col-md-offset-3">
+                <button class="btn-success btn blue1" id="passiveMode">Passive Mode</button>
+            </div>
+            <div class="col-md-2">
+                <button class="btn-warning btn blue2" id="safeMode">Safe Mode</button>
+            </div>
+            <div class="col-md-2">
+                <button class="btn-danger btn blue3" id="fullMode">Full Mode</button>
+
+            </div>
         </div>
         <div class="row">
-            <div class="col-xs-3">
-
-
-                <button id="playsong" class="btn-success btn-lg btn-block">Play Music
-                    <span class="glyphicon glyphicon-music"></span>
+            <div class="col-md-2 col-md-offset-3">
+                <button class="btn-primary btn-lg btn-block rows" id="forward"><span class="glyphicon glyphicon-arrow-up rotate-left-45"></span>
+                </button>
+            </div>
+            <div class="col-md-2">
+                <button class="col-md-2 btn-primary btn-lg btn-block rows" id="forward"><span class="glyphicon glyphicon-arrow-up"></span>
+                </button>
+                </div>
+                <div class="col-md-2">
+                <button class="col-md-2 btn-primary btn-lg btn-block rows" id="forward"><span class="glyphicon glyphicon-arrow-up rotate-right-45"></span>
                 </button>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-2">
-                <button class="btn-primary btn-lg btn-block" id="forward"><span class="glyphicon glyphicon-arrow-up rotate-left-45"></span>Forward-left
-                </button>
-            </div>
-            <div class="col-md-2">
-                <button class="btn-primary btn-lg btn-block" id="forward">Forward<span class="glyphicon glyphicon-arrow-up"></span>
-                </button>
-            </div>
-            <div class="col-md-2">
-                </button>
-                <button class="btn-primary btn-lg btn-block" id="forward">Forward-right<span class="glyphicon glyphicon-arrow-up rotate-right-45"></span>
-                </button>
-            </div>
 
-        </div>
         <div class="row">
-            <div class="col-md-2">
-                <button class="btn-primary btn-lg btn-block" id="turnLeft"><span class="glyphicon glyphicon-arrow-left"> Left</span>
+            <div class="col-md-2 col-md-offset-3">
+                <button class="col-md-2 col-offset-3 btn-primary btn-lg btn-block rows" id="turnLeft"><span class="glyphicon glyphicon-arrow-left"></span>
                 </button>
             </div>
-            <div class="col-md-2 ">
-
-                <button class="btn-lg btn-block btn-danger" id="stop">Stop
+            <div class="col-md-2">
+                <button class="col-md-2 btn-lg btn-block btn-danger stop" id="stop">
                     <span class="glyphicon glyphicon-stop"></span>
                 </button>
             </div>
-
             <div class="col-md-2">
-                <button class="btn-primary btn-lg btn-block" id="turnRight">Right<span class="glyphicon glyphicon-arrow-right"></span>
+                <button class="col-md-2 btn-primary btn-lg btn-block rows" id="turnRight"><span class="glyphicon glyphicon-arrow-right"></span>
                 </button>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-2">
-                <button class="btn-primary btn-lg btn-block" id="backleft">Back-Left
+            <div class="col-md-2 col-md-offset-3">
+                <button class="col-md-2 col-offset-3 btn-primary btn-lg btn-block rows" id="backleft"><span class="glyphicon glyphicon-arrow-down rotate-right-45"></span>
                 </button>
             </div>
-            <div class="col-md-2">
-                <button class="btn-primary btn-lg btn-block" id="backward">Back<span class="glyphicon glyphicon-arrow-down"></span>
+<div class="col-md-2">
+                <button class="col-md-2 btn-primary btn-lg btn-block rows" id="backward"><span class="glyphicon glyphicon-arrow-down"></span>
                 </button>
             </div>
-            <div class="col-md-2">
-                <button class="btn-primary btn-lg btn-block" id="backright">Back-Right
+<div class="col-md-2">
+                <button class="col-md-2 btn-primary btn-lg btn-block rows" id="backright"><span class="glyphicon glyphicon-arrow-down rotate-left-45"></span>
                 </button>
             </div>
+
         </div>
+    </div>
         <div class="row">
             <div class="col-md-3" id="leftsignal" style="height:300px">.....</div>
             <div class="col-md-3" id="front_leftsignal" style="height:300px">.....</div>
@@ -392,6 +387,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
     </div>
 </body>
